@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@700&display=swap');
+$primary: #555bff;
+$secondary: #22d2a0;
+$background: white;
+$green: #1fc11b;
+$yellow: #ffd913;
+$orange: #ff9c55;
+$red: #ff5555;
+
+.rainbow-card {
+  background-color: $background;
+  box-sizing: border-box;
+  display: block;
+  width: 300px;
+  min-height: 90px;
+  border: 3px solid $primary;
+  padding: 15px;
+  margin: calc(50vh - 30px auto 0 auto);
+  box-shadow: 10px -10px 0 -3px $background, 10px -10px $green,
+    20px -20px 0 -3px $background, 20px -20px $yellow,
+    30px -30px 0 -3px $background, 30px -30px $orange,
+    40px -40px 0 -3px $background, 40px -40px $red;
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+
+  &:hover {
+    top: -40px;
+    left: 40px;
+    box-shadow: 0 0 0 -3px $background, 0 0 0 0 $green, 0 0 0 -3px $background,
+      0 0 0 0 $yellow, 0 0 0 -3px $background, 0 0 0 0 $orange,
+      0 0 0 -3px $background, 0 0 0 0 $red;
+  }
+  p {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    width: 264px;
+    overflow: hidden;;
+    font-family: "Archivo", sans-serif;
+    text-overflow: ellipsis;
+  }
+  h2 {
+    font-size: 14px;
+    font-weight: normal;
+    font-family: "Archivo Black", "Archivo", sans-serif;
+  }
+}
