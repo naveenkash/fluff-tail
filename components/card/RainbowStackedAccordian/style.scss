@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@700&display=swap");
 $primary: #555bff;
 $secondary: #22d2a0;
 $background: white;
@@ -33,20 +33,23 @@ $red: #ff5555;
       0 0 0 0 $yellow, 0 0 0 -3px $background, 0 0 0 0 $orange,
       0 0 0 -3px $background, 0 0 0 0 $red;
   }
-  p {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-    width: 264px;
-    overflow: hidden;;
-    font-family: "Archivo", sans-serif;
-    text-overflow: ellipsis;
-  }
-  h2 {
-    font-size: 14px;
-    font-weight: normal;
-    font-family: "Archivo Black", "Archivo", sans-serif;
+  a {
+    text-decoration: none;
+    p {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      width: 264px;
+      overflow: hidden;
+      font-family: "Archivo", sans-serif;
+      text-overflow: ellipsis;
+    }
+    h2 {
+      font-size: 14px;
+      font-weight: normal;
+      font-family: "Archivo Black", "Archivo", sans-serif;
+    }
   }
 }
