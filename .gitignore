@@ -25,5 +25,5 @@ yarn-error.log*
 /src
 /public
 /build
-package.lock.json
+package-lock.json
 /lib
