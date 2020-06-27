@@ -1,8 +1,6 @@
-<img style="display: block; margin: auto;" alt="photo" src="fluff-tail.png">
+<img style="display: block; margin:0 auto;" alt="photo" src="fluff-tail.png">
 <h2 align="center">Fluff Tail</h2>
 Fluff-tail is a custom component library for React
-
----
 
 ## Components we support
 
@@ -12,8 +10,6 @@ Fluff-tail is a custom component library for React
 - [Rainbow Stacked Accordian](https://github.com/naveenkash/fluff-tail/tree/master/components/card/RainbowStackedAccordian)
 - [Card Hover Interaction](https://github.com/naveenkash/fluff-tail/tree/master/components/card/CardHoverInteraction)
 </details>
-
----
 
 ## How to use 
 
@@ -31,5 +27,8 @@ import { CardHover } from "fluff-tail";
     href={"https://toyoursite.com"}
     btnTitle={"Go to My Site"}
     image={"Pass in a background image"}
+    alt={"alt text for image"}
+    openNewPage={true} // target set to _blank when set to true
+    showBtn={true} // Wheather to show button or not
 />
 ```
