@@ -13,7 +13,7 @@ export default class RainbowStackedAccordian extends Component {
     return (
       <div className="rainbow-card">
         <a
-          href={this.props.disabled ? "javascript: void (0)" : this.props.href}
+          href={this.props.disabled ? "/#" : this.props.href}
           target={this.props.openNewPage ? "_blank" : "_self"}
         >
           {(() => {
