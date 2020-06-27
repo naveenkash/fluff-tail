@@ -42,5 +42,6 @@ CardHoverInteraction.propTypes = {
   desc: PropTypes.string,
   title: PropTypes.string,
   openNewPage: PropTypes.bool,
+  btnTitle: PropTypes.string,
 };
 export default CardHoverInteraction;
