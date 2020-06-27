@@ -1,14 +1,14 @@
-<img style="display: block; margin:0 auto;" alt="photo" src="fluff-tail.png">
-<h2 align="center">Fluff Tail</h2>
+<h2>Fluff Tail</h2>
 Fluff-tail is a custom component library for React
 
-## Components we support
+## Components currently supported
 
 <details>
   <summary>Card</summary>
 
 - [Rainbow Stacked Accordian](https://github.com/naveenkash/fluff-tail/tree/master/components/card/RainbowStackedAccordian)
 - [Card Hover Interaction](https://github.com/naveenkash/fluff-tail/tree/master/components/card/CardHoverInteraction)
+- [Article Deck](https://github.com/naveenkash/fluff-tail/tree/master/components/card/ArticleDeck)
 </details>
 
 ## How to use 
