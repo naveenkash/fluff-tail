@@ -41,6 +41,24 @@ function FoldingCard(props) {
         styleElem,
         `.folding__link:after{background:${props.subTitleColor}}`
       );
+
+    if (props.width)
+      append(
+        styleElem,
+        `.folding__article,
+         .folding__article:before {
+           width: ${props.width}px;
+         }`
+      );
+
+    if (props.height)
+      append(
+        styleElem,
+        `.folding__article,
+         .folding__article:before {
+           height: ${props.height}px;
+         }`
+      );
   });
 
   return (
@@ -88,5 +106,7 @@ FoldingCard.propTypes = {
   arrowColor: PropTypes.string,
   subTitleColor: PropTypes.string,
   stripeColor: PropTypes.string,
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 export default FoldingCard;
