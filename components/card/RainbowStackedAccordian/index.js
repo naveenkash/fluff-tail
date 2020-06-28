@@ -5,7 +5,6 @@ export default class RainbowStackedAccordian extends Component {
   static defaultProps = {
     headingColor: "#000000",
     descColor: "#000000",
-    disabled: false,
     openNewPage: false,
   };
 
@@ -13,7 +12,7 @@ export default class RainbowStackedAccordian extends Component {
     return (
       <div className="rainbow-card">
         <a
-          href={this.props.disabled ? "/#" : this.props.href}
+          href={this.props.href ? this.props.href : "/#"}
           target={this.props.openNewPage ? "_blank" : "_self"}
         >
           {(() => {
@@ -46,6 +45,5 @@ RainbowStackedAccordian.propTypes = {
   href: PropTypes.string,
   descColor: PropTypes.string,
   headingColor: PropTypes.string,
-  disabled: PropTypes.bool,
   openNewPage: PropTypes.bool,
 };
