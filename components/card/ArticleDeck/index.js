@@ -33,7 +33,7 @@ function ArticleDeck(props) {
     >
       <div className="article-deck-card">
         <a
-          href={props.disabled ? "/#" : props.href}
+          href={props.href ? props.href : "/#"}
           target={props.openNewPage ? "_blank" : "_self"}
         >
           <div className="article-deck-child">
@@ -54,10 +54,14 @@ function ArticleDeck(props) {
     </div>
   );
 }
+
+ArticleDeck.defaultProps = {
+  openNewPage: false,
+};
+
 ArticleDeck.propTypes = {
   number: PropTypes.number,
   href: PropTypes.string,
-  disabled: PropTypes.bool,
   openNewPage: PropTypes.bool,
   title: PropTypes.string,
   subTitle: PropTypes.string,
