@@ -1,1 +1,1 @@
-export { Accordian, CardHover, ArticleDeckCard } from "./card";
+export { Accordian, CardHover, ArticleDeckCard, FoldingCard } from "./card";
