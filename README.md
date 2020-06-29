@@ -44,7 +44,11 @@ import { CardHover } from "fluff-tail";
   <summary>Card</summary>
 
 <details>
-  <summary>Rainbow Stacked Accordian</summary>
+  <summary>Rainbow Stacked Accordian</summary> <br/>
+
+```js
+import { Accordian } from "fluff-tail";
+```
 
 ![Accordian!](assets/accordian.gif)
 
@@ -60,7 +64,11 @@ import { CardHover } from "fluff-tail";
 </details>
 
 <details>
-  <summary>Card Hover Interaction</summary>
+  <summary>Card Hover Interaction</summary> <br/>
+
+```js
+import { CardHover } from "fluff-tail";
+```
 
 ![Card Hover!](assets/card-hover.gif)
 
@@ -78,7 +86,11 @@ import { CardHover } from "fluff-tail";
 </details>
 
 <details>
-  <summary>Article Deck</summary>
+  <summary>Article Deck</summary> <br/>
+
+```js
+import { ArticleDeck } from "fluff-tail";
+```
 
 ![Article Deck!](assets/article-deck.gif)
 
@@ -97,7 +109,11 @@ import { CardHover } from "fluff-tail";
 </details>
 
 <details>
-  <summary>Folding Card</summary>
+  <summary>Folding Card</summary> <br/>
+
+```js
+import { FoldingCard } from "fluff-tail";
+```
 
 ![folding card!](assets/folding-card.gif)
 
