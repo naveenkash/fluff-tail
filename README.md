@@ -50,7 +50,7 @@ import { CardHover } from "fluff-tail";
 import { Accordian } from "fluff-tail";
 ```
 
-![Accordian!](assets/accordian.gif)
+![Accordian!](https://drive.google.com/uc?export=view&id=1VXNTZuHm-vTmBFxW1GDfuHGmeyrGwYic)
 
 | Prop         | Type    | What they do                                          |
 | ------------ | ------- | ----------------------------------------------------- |
@@ -70,7 +70,7 @@ import { Accordian } from "fluff-tail";
 import { CardHover } from "fluff-tail";
 ```
 
-![Card Hover!](assets/card-hover.gif)
+![Card Hover!](https://drive.google.com/uc?export=view&id=1nbLX6xY0X1LPpgQFaydhyqTx0gDyCUGN)
 
 | Prop        | Type    | What they do                                          |
 | ----------- | ------- | ----------------------------------------------------- |
@@ -92,7 +92,7 @@ import { CardHover } from "fluff-tail";
 import { ArticleDeck } from "fluff-tail";
 ```
 
-![Article Deck!](assets/article-deck.gif)
+![Article Deck!](https://drive.google.com/uc?export=view&id=1yiQE9DQ21RCp54Ky-GGCEa44c7JkdcmH)
 
 | Prop          | Type    | What they do                                          |
 | ------------- | ------- | ----------------------------------------------------- |
@@ -115,7 +115,7 @@ import { ArticleDeck } from "fluff-tail";
 import { FoldingCard } from "fluff-tail";
 ```
 
-![folding card!](assets/folding-card.gif)
+![folding card!](https://drive.google.com/uc?export=view&id=12GIYDY1ml13VzuYKUaoQbfNishdc_bMQ)
 
 | Prop                 | Type    | What they do                                          |
 | -------------------- | ------- | ----------------------------------------------------- |
