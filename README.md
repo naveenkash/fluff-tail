@@ -10,6 +10,7 @@ Fluff-tail is a custom component library for React
 - [Card Hover Interaction](https://github.com/naveenkash/fluff-tail/tree/master/components/card/CardHoverInteraction)
 - [Article Deck](https://github.com/naveenkash/fluff-tail/tree/master/components/card/ArticleDeck)
 - [Folding Card](https://github.com/naveenkash/fluff-tail/tree/master/components/card/FoldingCard)
+- [Profile Card](https://github.com/naveenkash/fluff-tail/tree/master/components/card/ProfileCard)
 </details>
 
 ## How to install
