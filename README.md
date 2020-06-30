@@ -138,4 +138,31 @@ import { FoldingCard } from "fluff-tail";
 
 </details>
 
+<details>
+  <summary>Profile Card</summary> <br/>
+
+```js
+import { ProfileCard } from "fluff-tail";
+```
+
+![folding card!](https://drive.google.com/uc?export=view&id=1M5aQkrnJmPmDw0bJd394FO2oZwAP54cu)
+
+| Prop             | Type    | What they do                 |
+| ---------------- | ------- | ---------------------------- |
+| image            | string  | image for the background     |
+| alt              | string  | alt text for image           |
+| name             | string  | name of the profile         |
+| role             | string  | role of the profile          |
+| roleColor        | string  | color for role text          |
+| nameColor        | string  | color for name text          |
+| backgroundColor  | string  | background color of the card |
+| boxShadow        | string  | box shadow for the card      |
+| disableBackCards | boolean | disable all back cards       |
+| disableOneCard   | boolean | disable one back card        |
+| gap              | string  | gap between image and card   |
+| width            | number  | width of the card            |
+| height           | number  | height of the card           |
+
+</details>
+
 </details>
