@@ -1,50 +1,51 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import "./style.scss";
-function append(styleTag, node) {
-  styleTag.appendChild(document.createTextNode(node));
-}
-function FoldingCard(props) {
-  let styleElem = document.head.appendChild(document.createElement("style"));
-  let attr = document.createAttribute("type");
-  attr.value = "text/css";
-  styleElem.setAttributeNode(attr);
+import { createStyleTag, addRulesToStyleTag } from "../../helper-functions";
 
+function FoldingCard(props) {
   useEffect(() => {
+    let styleTag = createStyleTag();
     if (props.titleColor)
-      append(styleElem, `.folding__title {color: ${props.titleColor};} `);
+      addRulesToStyleTag(
+        styleTag,
+        `.folding__title {color: ${props.titleColor};} `
+      );
     if (props.backgroundColor)
-      append(
-        styleElem,
+      addRulesToStyleTag(
+        styleTag,
         `.folding__link{background: ${props.backgroundColor};} `
       );
     if (props.mainBorderColor)
-      append(
-        styleElem,
+      addRulesToStyleTag(
+        styleTag,
         `.folding__content{border-color: ${props.mainBorderColor};} `
       );
     if (props.folderHoverColor)
-      append(
-        styleElem,
+      addRulesToStyleTag(
+        styleTag,
         `.folding__link:hover .folding__content--rhs{background: ${props.folderHoverColor};}`
       );
     if (props.stripeColor)
-      append(
-        styleElem,
+      addRulesToStyleTag(
+        styleTag,
         `.folding__article:before{background-image: repeating-linear-gradient(-24deg, transparent, transparent 4px, ${props.stripeColor} 0, ${props.stripeColor} 5px);border-color:${props.secondaryBorderColor}}`
       );
     if (props.arrowColor)
-      append(styleElem, `.folding__link:after{background:${props.arrowColor}}`);
+      addRulesToStyleTag(
+        styleTag,
+        `.folding__link:after{background:${props.arrowColor}}`
+      );
 
     if (props.subTitleColor)
-      append(
-        styleElem,
+      addRulesToStyleTag(
+        styleTag,
         `.folding__link:after{background:${props.subTitleColor}}`
       );
 
     if (props.width)
-      append(
-        styleElem,
+      addRulesToStyleTag(
+        styleTag,
         `.folding__article,
          .folding__article:before {
            width: ${props.width}px;
@@ -52,8 +53,8 @@ function FoldingCard(props) {
       );
 
     if (props.height)
-      append(
-        styleElem,
+      addRulesToStyleTag(
+        styleTag,
         `.folding__article,
          .folding__article:before {
            height: ${props.height}px;
