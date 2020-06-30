@@ -69,8 +69,8 @@ function ProfileCard(props) {
         <img src={props.image} alt={props.alt} />
       </div>
       <div className="profile-details">
-        <h2 className="profile-name">{props.name}</h2>
-        <h2 className="profile-role">{props.role}</h2>
+        <h2 className="profile-name">{props.name ? props.name : ""}</h2>
+        <h2 className="profile-role">{props.role ? props.role : ""}</h2>
       </div>
     </div>
   );
