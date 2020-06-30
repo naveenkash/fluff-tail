@@ -3,9 +3,13 @@
   "version": "0.2.2",
   "private": false,
   "main": "lib/index.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/naveenkash/fluff-tail"
+  },
+  "bugs": {
+    "url": "https://github.com/naveenkash/fluff-tail/issues"
   },
   "scripts": {
     "build": "webpack"
