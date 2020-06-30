@@ -5,59 +5,62 @@ function getRandomKey() {
   return "_" + Math.random().toString(36).substr(2, 9);
 }
 
-function ArticleDeck(props) {
-  useEffect(() => {
-    if (props.titleColor)
+class ArticleDeck extends React.Component {
+  static defaultprops = {
+    openNewPage: false,
+  };
+  componentDidMount() {
+    if (this.props.titleColor)
       document.querySelector(".article-deck-child h2").style.color =
-        props.titleColor;
+        this.props.titleColor;
 
-    if (props.subTitleColor)
+    if (this.props.subTitleColor)
       document.querySelector(".article-deck-child p").style.color =
-        props.subTitleColor;
+        this.props.subTitleColor;
 
-    if (props.width)
+    if (this.props.width)
       document.querySelector(".article-deck-wrapper").style.width =
-        props.width + "px";
+        this.props.width + "px";
 
-    if (props.height)
+    if (this.props.height)
       document.querySelector(".article-deck-wrapper").style.height =
-        props.height + "px";
-  });
-
-  return (
-    <div
-      className="article-deck-wrapper"
-      style={{
-        "--article-count": props.number,
-      }}
-    >
-      <div className="article-deck-card">
-        <a
-          href={props.href ? props.href : "/#"}
-          target={props.openNewPage ? "_blank" : "_self"}
-        >
-          <div className="article-deck-child">
-            <h2>{props.title ? props.title : ""}</h2>
-            <p>{props.subTitle ? props.subTitle : ""}</p>
-          </div>
-        </a>
-        {(() => {
-          if (props.number > 0) {
-            return [...Array(props.number)].map(() => {
-              return (
-                <div className="article-deck-child" key={getRandomKey()}></div>
-              );
-            });
-          }
-        })()}
+        this.props.height + "px";
+  }
+  render() {
+    return (
+      <div
+        className="article-deck-wrapper"
+        style={{
+          "--article-count": this.props.number,
+        }}
+      >
+        <div className="article-deck-card">
+          <a
+            href={this.props.href ? this.props.href : "/#"}
+            target={this.props.openNewPage ? "_blank" : "_self"}
+          >
+            <div className="article-deck-child">
+              <h2>{this.props.title ? this.props.title : ""}</h2>
+              <p>{this.props.subTitle ? this.props.subTitle : ""}</p>
+            </div>
+          </a>
+          {(() => {
+            if (this.props.number > 0) {
+              return [...Array(this.props.number)].map(() => {
+                return (
+                  <div
+                    className="article-deck-child"
+                    key={getRandomKey()}
+                  ></div>
+                );
+              });
+            }
+          })()}
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
-
-ArticleDeck.defaultProps = {
-  openNewPage: false,
-};
 
 ArticleDeck.propTypes = {
   number: PropTypes.number,

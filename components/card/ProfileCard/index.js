@@ -1,84 +1,97 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./style.scss";
 import PropTypes from "prop-types";
 import { createStyleTag, addRulesToStyleTag } from "../../helper-functions";
 
-function ProfileCard(props) {
-  useEffect(() => {
+class ProfileCard extends React.Component {
+  static defaultprops = {
+    alt: "Image",
+  };
+  componentDidMount() {
     let styleTag = createStyleTag();
 
-    if (props.roleColor)
+    if (this.props.roleColor)
       addRulesToStyleTag(
         styleTag,
-        `.profile-details .profile-role {color:${props.roleColor}}`
+        `.profile-details .profile-role {color:${this.props.roleColor}}`
       );
 
-    if (props.nameColor)
+    if (this.props.nameColor)
       addRulesToStyleTag(
         styleTag,
-        `.profile-details .profile-name {color:${props.nameColor}}`
+        `.profile-details .profile-name {color:${this.props.nameColor}}`
       );
 
-    if (props.disableOneCard)
+    if (this.props.disableOneCard)
       addRulesToStyleTag(styleTag, `.profile-card:hover:before {display:none}`);
 
-    if (props.disableBackCards)
+    if (this.props.disableBackCards)
       addRulesToStyleTag(
         styleTag,
         `.profile-card:hover:before,.profile-card:hover:after {display:none}`
       );
 
-    if (props.boxShadow)
+    if (this.props.boxShadow)
       addRulesToStyleTag(
         styleTag,
-        `.profile-card:hover:before,.profile-card:hover:after,.profile-card {box-shadow:${props.boxShadow}}`
+        `.profile-card:hover:before,.profile-card:hover:after,.profile-card {box-shadow:${this.props.boxShadow}}`
       );
 
-    if (props.cardBackgroundColor)
+    if (this.props.cardBackgroundColor)
       addRulesToStyleTag(
         styleTag,
-        `.profile-card:hover:before,.profile-card:hover:after,.profile-card {background:${props.cardBackgroundColor}}`
+        `.profile-card:hover:before,.profile-card:hover:after,.profile-card {background:${this.props.cardBackgroundColor}}`
       );
 
-    if (props.gap >= 0)
+    if (this.props.gap >= 0)
       addRulesToStyleTag(
         styleTag,
         `.profile-card .profile-imgBx {
-            top:${props.gap}px;
-            left:${props.gap}px;
-            bottom:${props.gap}px;
-            right:${props.gap}px;
+            top:${this.props.gap}px;
+            left:${this.props.gap}px;
+            bottom:${this.props.gap}px;
+            right:${this.props.gap}px;
         }.profile-details {
-            left:${props.gap}px;
-            bottom:${props.gap}px;
-            right:${props.gap}px;
+            left:${this.props.gap}px;
+            bottom:${this.props.gap}px;
+            right:${this.props.gap}px;
         }.profile-details h2{
-            width:${(props.width ? props.width : 300) - props.gap * 2}px
+            width:${
+              (this.props.width ? this.props.width : 300) - this.props.gap * 2
+            }px
         }
         `
       );
-    if (props.width)
-      addRulesToStyleTag(styleTag, `.profile-card{width:${props.width}px}`);
+    if (this.props.width)
+      addRulesToStyleTag(
+        styleTag,
+        `.profile-card{width:${this.props.width}px}`
+      );
 
-    if (props.height)
-      addRulesToStyleTag(styleTag, `.profile-card{height:${props.height}px}`);
-  });
-  return (
-    <div className="profile-card">
-      <div className="profile-imgBx">
-        <img src={props.image} alt={props.alt} />
+    if (this.props.height)
+      addRulesToStyleTag(
+        styleTag,
+        `.profile-card{height:${this.props.height}px}`
+      );
+  }
+  render() {
+    return (
+      <div className="profile-card">
+        <div className="profile-imgBx">
+          <img src={this.props.image} alt={this.props.alt} />
+        </div>
+        <div className="profile-details">
+          <h2 className="profile-name">
+            {this.props.name ? this.props.name : ""}
+          </h2>
+          <h2 className="profile-role">
+            {this.props.role ? this.props.role : ""}
+          </h2>
+        </div>
       </div>
-      <div className="profile-details">
-        <h2 className="profile-name">{props.name ? props.name : ""}</h2>
-        <h2 className="profile-role">{props.role ? props.role : ""}</h2>
-      </div>
-    </div>
-  );
+    );
+  }
 }
-
-ProfileCard.defaultProps = {
-  alt: "Image",
-};
 
 ProfileCard.propTypes = {
   image: PropTypes.string,
