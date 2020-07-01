@@ -30,9 +30,9 @@ $parallaxReturnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
     }
     .parallax-card {
       transition: 0.6s $parallaxHoverEasing, box-shadow 2s $parallaxHoverEasing;
-      box-shadow: rgba(rgb(255, 255, 255), 0.2) 0 0 40px 5px,
+      box-shadow: rgba(255, 255, 255, 0.2) 0 0 10px 5px,
         var(--parallax-border-color) 0 0 0 1px,
-        var(--parallax-box-shadow-color) 0 30px 60px 0, inset #333 0 0 0 5px,
+        var(--parallax-box-shadow-color) 0 10px 30px 0, inset #333 0 0 0 5px,
         inset var(--parallax-border-inside-color) 0 0 0 6px;
     }
   }
@@ -45,7 +45,7 @@ $parallaxReturnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
   background-color: #333;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: var(--parallax-box-shadow-color) 0 30px 60px 0,
+  box-shadow: var(--parallax-box-shadow-color) 0 10px 30px 0,
     inset #333 0 0 0 5px, inset var(--parallax-border-inside-color) 0 0 0 6px;
   transition: 1s $parallaxReturnEasing;
   .parallax-card-bg {
