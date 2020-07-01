@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./style.scss";
 import PropTypes from "prop-types";
 function getRandomKey() {
@@ -6,17 +6,19 @@ function getRandomKey() {
 }
 
 class ArticleDeck extends React.Component {
-  static defaultprops = {
+  static defaultProps = {
     openNewPage: false,
   };
   componentDidMount() {
     if (this.props.titleColor)
-      document.querySelector(".article-deck-child h2").style.color =
-        this.props.titleColor;
+      document.querySelector(
+        ".article-deck-child h2"
+      ).style.color = this.props.titleColor;
 
     if (this.props.subTitleColor)
-      document.querySelector(".article-deck-child p").style.color =
-        this.props.subTitleColor;
+      document.querySelector(
+        ".article-deck-child p"
+      ).style.color = this.props.subTitleColor;
 
     if (this.props.width)
       document.querySelector(".article-deck-wrapper").style.width =

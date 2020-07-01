@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { createStyleTag, addRulesToStyleTag } from "../../helper-functions";
 
 class ProfileCard extends React.Component {
-  static defaultprops = {
+  static defaultProps = {
     alt: "Image",
   };
   componentDidMount() {
