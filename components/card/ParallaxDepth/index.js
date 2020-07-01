@@ -110,6 +110,7 @@ ParallaxDepth.propTypes = {
   insideBorderColor: PropTypes.string,
   borderColor: PropTypes.string,
   title: PropTypes.string,
+  image: PropTypes.string,
   desc: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number,
