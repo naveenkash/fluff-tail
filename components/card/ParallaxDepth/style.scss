@@ -1,0 +1,112 @@
+$parallaxHoverEasing: cubic-bezier(0.23, 1, 0.32, 1);
+$parallaxReturnEasing: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+.parallax-card-wrap {
+  margin: 10px;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  width: 240px;
+  height: 320px;
+  --parallax-box-shadow-color: rgba(0, 0, 0, 0.66);
+  --parallax-border-inside-color: rgba(255, 255, 255, 0.5);
+  --parallax-border-color: #ffffff;
+  &:hover {
+    .parallax-card-info {
+      transform: translateY(0);
+    }
+    .parallax-card-info,
+    .parallax-card-info p {
+      opacity: 1;
+      transition: 0.6s $parallaxHoverEasing;
+    }
+    .parallax-card-info:after {
+      transition: 5s $parallaxHoverEasing;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .parallax-card-bg {
+      transition: 0.6s $parallaxHoverEasing, opacity 5s $parallaxHoverEasing;
+      opacity: 0.8;
+    }
+    .parallax-card {
+      transition: 0.6s $parallaxHoverEasing, box-shadow 2s $parallaxHoverEasing;
+      box-shadow: rgba(rgb(255, 255, 255), 0.2) 0 0 40px 5px,
+        var(--parallax-border-color) 0 0 0 1px,
+        var(--parallax-box-shadow-color) 0 30px 60px 0, inset #333 0 0 0 5px,
+        inset var(--parallax-border-inside-color) 0 0 0 6px;
+    }
+  }
+}
+
+.parallax-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--parallax-box-shadow-color) 0 30px 60px 0,
+    inset #333 0 0 0 5px, inset var(--parallax-border-inside-color) 0 0 0 6px;
+  transition: 1s $parallaxReturnEasing;
+  .parallax-card-bg {
+    opacity: 0.5;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 1s $parallaxReturnEasing, opacity 5s 1s $parallaxReturnEasing;
+    pointer-events: none;
+    box-sizing: content-box;
+  }
+  .parallax-card-info {
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    transform: translateY(40%);
+    transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    p {
+      opacity: 0;
+      text-shadow: rgba(black, 1) 0 2px 3px;
+      transition: 0.6s 1.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+      margin-top: 10px;
+      line-height: 1.5em;
+    }
+    * {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(#000, 0.6) 100%
+      );
+      background-blend-mode: overlay;
+      opacity: 0;
+      transform: translateY(100%);
+      transition: 5s 1s $parallaxReturnEasing;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      text-shadow: rgba(black, 0.5) 0 10px 10px;
+
+      margin-top: 10px;
+    }
+  }
+}

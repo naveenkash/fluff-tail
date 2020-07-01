@@ -4,4 +4,5 @@ export {
   ArticleDeck,
   FoldingCard,
   ProfileCard,
+  ParallaxDepth,
 } from "./card";
