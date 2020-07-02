@@ -109,7 +109,7 @@ import { FoldingCard } from "fluff-tail";
 import { ProfileCard } from "fluff-tail";
 ```
 
-![folding card!](https://drive.google.com/uc?export=view&id=1M5aQkrnJmPmDw0bJd394FO2oZwAP54cu)
+![profile card!](https://drive.google.com/uc?export=view&id=1M5aQkrnJmPmDw0bJd394FO2oZwAP54cu)
 
 | Prop             | Type    | What they do                 |
 | ---------------- | ------- | ---------------------------- |
@@ -136,7 +136,7 @@ import { ProfileCard } from "fluff-tail";
 import { ParallaxDepth } from "fluff-tail";
 ```
 
-![folding card!](https://drive.google.com/uc?export=view&id=1H8KCq0kodCSY1H5dGwBblMJJf63qnHFP)
+![parallax depth!](https://drive.google.com/uc?export=view&id=1H8KCq0kodCSY1H5dGwBblMJJf63qnHFP)
 
 | Prop              | Type   | What they do                        |
 | ----------------- | ------ | ----------------------------------- |
