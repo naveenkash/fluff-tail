@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/naveenkash/fluff-tail.svg)](http://hits.dwyl.com/naveenkash/fluff-tail)
+
 <h2>Fluff Tail</h2>
 Fluff-tail is a custom component library for React
 
