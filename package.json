@@ -26,7 +26,9 @@
   },
   "scripts": {
     "build:prod": "webpack -p --env=production",
-    "build:dev": "webpack -d --env=development"
+    "build:dev": "webpack -d --env=development",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
@@ -38,6 +40,10 @@
     "@babel/plugin-proposal-class-properties": "^7.10.1",
     "@babel/preset-env": "^7.10.3",
     "@babel/preset-react": "^7.10.1",
+    "@storybook/addon-actions": "^6.2.0",
+    "@storybook/addon-essentials": "^6.2.0",
+    "@storybook/addon-links": "^6.2.0",
+    "@storybook/react": "^6.2.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "react": "^16.13.1",
@@ -53,5 +59,6 @@
   },
   "eslintConfig": {
     "extends": "react-app"
-  }
+  },
+  "dependencies": {}
 }
