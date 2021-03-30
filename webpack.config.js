@@ -1,13 +1,18 @@
 var path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 
+const isProduction = process.env.NODE_ENV;
+
 module.exports = {
-  mode: "production",
+  mode: !!isProduction ? "production" : "development",
   entry: "./components/index.js",
   output: {
     path: path.resolve("lib"),
     filename: "index.js",
     libraryTarget: "commonjs2",
+  },
+  resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
   },
   module: {
     rules: [
@@ -15,6 +20,11 @@ module.exports = {
         test: /\.js?$/,
         exclude: /(node_modules)/,
         use: "babel-loader",
+      },
+      {
+        test: /\.(tsx|ts)?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
       },
       {
         test: /\.s[ac]ss$/i,
@@ -43,5 +53,7 @@ module.exports = {
       amd: "react-dom",
     },
   },
-  optimization: { minimize: true, minimizer: [new TerserPlugin()] },
+  optimization: !!isProduction
+    ? { minimize: true, minimizer: [new TerserPlugin()] }
+    : {},
 };
